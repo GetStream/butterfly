@@ -24,7 +24,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
@@ -55,7 +55,7 @@ private fun MessagingScreenExpanded(
     val hingeHalfSize = 15.dp
     val windowSize = LocalWindowDpSize.current
     val rowItemWidth = windowSize.windowSize.width / 2 - hingeHalfSize
-    var selectedChannelId by remember { mutableStateOf<String?>(null) }
+    var selectedChannelId by rememberSaveable { mutableStateOf<String?>(null) }
 
     Row(Modifier.fillMaxSize()) {
         Box(modifier = Modifier.width(rowItemWidth)) {
