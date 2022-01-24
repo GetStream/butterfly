@@ -5,6 +5,11 @@ pluginManagement {
         mavenCentral()
     }
 }
+
+plugins {
+    id("com.gradle.enterprise") version "3.7"
+}
+
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
@@ -18,3 +23,10 @@ include ':app'
 include ':butterfly'
 include ':butterfly-compose'
 include ':butterfly-livedata'
+
+gradleEnterprise {
+    buildScan {
+        termsOfServiceUrl = "https://gradle.com/terms-of-service"
+        termsOfServiceAgree = "yes"
+    }
+}
