@@ -44,6 +44,7 @@ Next, add the dependency below to your **module**'s `build.gradle` file.
 ```gradle
 dependencies {
     implementation "io.getstream:butterfly:1.0.0"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2"
 }
 ```
 
