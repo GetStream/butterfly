@@ -1,0 +1,66 @@
+import io.getstream.butterfly.Configuration
+import io.getstream.butterfly.Dependencies
+import io.getstream.butterfly.Versions
+
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    compileSdkVersion Configuration.compileSdk
+    defaultConfig {
+        applicationId "io.getstream.butterflydemo"
+        minSdkVersion Configuration.minSdk
+        targetSdkVersion Configuration.targetSdk
+        versionCode Configuration.versionCode
+        versionName Configuration.versionName
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+
+    buildFeatures {
+        compose true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion Versions.COMPOSE
+    }
+
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation project(":butterfly-compose")
+    implementation project(":butterfly-livedata")
+
+    implementation Dependencies.material
+    implementation Dependencies.androidxLifecycle
+
+    implementation Dependencies.coroutines
+
+    implementation Dependencies.composeUI
+    implementation Dependencies.composeMaterial
+    implementation Dependencies.composeRuntime
+    implementation Dependencies.composeActivity
+    implementation Dependencies.composeMaterial3
+
+    implementation Dependencies.streamChatSDK
+}
+
+apply from: "$rootDir/spotless.gradle"

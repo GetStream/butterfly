@@ -1,0 +1,39 @@
+public final class io/getstream/butterfly/compose/LocalProvidersKt {
+	public static final fun getLocalPosture ()Landroidx/compose/runtime/ProvidableCompositionLocal;
+	public static final fun getLocalWindowDpSize ()Landroidx/compose/runtime/ProvidableCompositionLocal;
+}
+
+public final class io/getstream/butterfly/compose/StateExtensionsKt {
+	public static final fun getPostureState (Landroid/app/Activity;Landroidx/compose/runtime/Composer;I)Landroidx/compose/runtime/State;
+	public static final fun getPostureState (Landroidx/fragment/app/Fragment;Landroidx/compose/runtime/Composer;I)Landroidx/compose/runtime/State;
+	public static final synthetic fun getWindowLayoutInfoState (Landroid/app/Activity;Landroidx/compose/runtime/Composer;I)Landroidx/compose/runtime/State;
+	public static final synthetic fun getWindowLayoutInfoState (Landroidx/fragment/app/Fragment;Landroidx/compose/runtime/Composer;I)Landroidx/compose/runtime/State;
+	public static final fun windowLayoutInfoState (Landroidx/window/layout/WindowInfoTracker;Landroid/app/Activity;Landroidx/compose/runtime/Composer;I)Landroidx/compose/runtime/State;
+}
+
+public abstract class io/getstream/butterfly/compose/WindowDpSize {
+	public static final field $stable I
+	public synthetic fun <init> (JLkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getWindowSize-MYxV2XQ ()J
+}
+
+public final class io/getstream/butterfly/compose/WindowDpSize$Compact : io/getstream/butterfly/compose/WindowDpSize {
+	public static final field $stable I
+	public synthetic fun <init> (JLkotlin/jvm/internal/DefaultConstructorMarker;)V
+}
+
+public final class io/getstream/butterfly/compose/WindowDpSize$Expanded : io/getstream/butterfly/compose/WindowDpSize {
+	public static final field $stable I
+	public synthetic fun <init> (JLkotlin/jvm/internal/DefaultConstructorMarker;)V
+}
+
+public final class io/getstream/butterfly/compose/WindowDpSize$Medium : io/getstream/butterfly/compose/WindowDpSize {
+	public static final field $stable I
+	public synthetic fun <init> (JLkotlin/jvm/internal/DefaultConstructorMarker;)V
+}
+
+public final class io/getstream/butterfly/compose/WindowDpSizeKt {
+	public static final fun rememberWindowDpSize (Landroid/app/Activity;Landroidx/compose/runtime/Composer;I)Lio/getstream/butterfly/compose/WindowDpSize;
+	public static final fun rememberWindowDpSize (Landroidx/fragment/app/Fragment;Landroidx/compose/runtime/Composer;I)Lio/getstream/butterfly/compose/WindowDpSize;
+}
+
