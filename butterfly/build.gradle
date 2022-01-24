@@ -10,12 +10,8 @@ plugins {
 
 ext {
     PUBLISH_GROUP_ID = Configuration.artifactGroup
-    if (snapshot) {
-        PUBLISH_VERSION = Configuration.snapshotVersionName
-    } else {
-        PUBLISH_VERSION = Configuration.versionName
-    }
     PUBLISH_ARTIFACT_ID = 'butterfly'
+    PUBLISH_VERSION = rootVersionName
 }
 
 apply from: "${rootDir}/scripts/publish-module.gradle"
