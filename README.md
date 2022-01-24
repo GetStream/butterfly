@@ -139,6 +139,8 @@ GlobalWindowSize.windowSizeFactory = { windowPixelSize ->
     </a>
 </p>
 
+> Fold state: `FLAT` and `HALF-OPENED` from [Google](https://medium.com/androiddevelopers/unbundling-the-windowmanager-fa060adb3ce9).
+
 Posture class represents device postures in the flexible display or a hinge between two physical display panels.
 
 - **Posture.TableTop** - Device posture is in tabletop mode (half open with the hinge horizontal).
