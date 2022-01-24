@@ -1,0 +1,9 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+
+module:butterfly
+io.getstream.butterfly
+module:butterfly-compose
+io.getstream.butterfly.compose
+module:butterfly-livedata
+io.getstream.butterfly.livedata
