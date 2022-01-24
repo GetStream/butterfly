@@ -329,6 +329,7 @@ It would be helpful to understand the demo project if you check out the links be
 
 - [Compose Chat Messaging Tutorial](https://getstream.io/chat/compose/tutorial/)
 - [Introduction to dual-screen devices](https://docs.microsoft.com/en-us/dual-screen/introduction)
+- [Unbundling the WindowManager](https://medium.com/androiddevelopers/unbundling-the-windowmanager-fa060adb3ce9)
 
 ## Find this library useful? ❤️
 
