@@ -76,7 +76,9 @@ dependencies {
 
 ## Set up Foldable Emulator
 
-![foldable](/preview/instruction4.png)
+<a href="https://docs.microsoft.com/en-us/dual-screen/introduction">
+   <img src="/preview/instruction4.png" />
+</a>
 
 If you don't have foldable devices or emulators, you can set up a foldable emulator environment following the below instruction:
 
@@ -132,7 +134,9 @@ GlobalWindowSize.windowSizeFactory = { windowPixelSize ->
 ## Posture
 
 <p align="center">
+    <a href="https://medium.com/androiddevelopers/unbundling-the-windowmanager-fa060adb3ce9">
   <img src="/preview/posture.png" />
+    </a>
 </p>
 
 Posture class represents device postures in the flexible display or a hinge between two physical display panels.
