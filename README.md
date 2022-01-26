@@ -8,8 +8,8 @@
 </p><br>
 
 <p align="center">
-🦋 Butterfly helps to build adaptive and responsive UIs for Android with Jetpack WindowManager. <br>
-Also, supports useful functions for Jetpack Compose and LiveData integration.
+🦋 Butterfly helps you to build adaptive and responsive UIs for Android with Jetpack WindowManager. <br>
+Also, it supports useful functions for Jetpack Compose and LiveData integration.
 
 </p><br>
 
