@@ -18,6 +18,7 @@ package io.getstream.butterfly.compose
 
 import androidx.compose.runtime.ProvidableCompositionLocal
 import androidx.compose.runtime.compositionLocalOf
+import androidx.window.layout.WindowLayoutInfo
 import io.getstream.butterfly.Posture
 
 /** Definition of the [WindowDpSize] local provider. */
@@ -29,3 +30,9 @@ public val LocalWindowDpSize: ProvidableCompositionLocal<WindowDpSize> = composi
 public val LocalPosture: ProvidableCompositionLocal<Posture> = compositionLocalOf {
     error("CompositionLocal LocalPosture not provided")
 }
+
+/** Definition of the [WindowLayoutInfo] local provider. */
+public val LocalWindowLayoutInfo: ProvidableCompositionLocal<WindowLayoutInfo> =
+    compositionLocalOf {
+        error("CompositionLocal LocalWindowLayoutInfo not provided")
+    }
