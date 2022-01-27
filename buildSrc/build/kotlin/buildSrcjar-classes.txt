@@ -1,1 +1,0 @@
-/Users/jaewoongeum/Desktop/butterfly/buildSrc/build/classes/kotlin/main/io/getstream/butterfly/Configuration.class:/Users/jaewoongeum/Desktop/butterfly/buildSrc/build/classes/kotlin/main/io/getstream/butterfly/Dependencies.class:/Users/jaewoongeum/Desktop/butterfly/buildSrc/build/classes/kotlin/main/io/getstream/butterfly/Versions.class
