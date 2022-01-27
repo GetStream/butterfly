@@ -16,23 +16,31 @@
 
 package io.getstream.butterfly.compose
 
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.DpSize
 import androidx.compose.ui.unit.dp
 import androidx.window.layout.FoldingFeature
-import io.getstream.butterfly.compose.internal.px2dp
+import io.getstream.butterfly.hingeHeightDpSize
+import io.getstream.butterfly.hingeWidthDpSize
 
-/** Returns a Dp size from a [FoldingFeature]. */
+/** Returns a height dp size from a [FoldingFeature]. */
+public val FoldingFeature.hingeWidthDp: Dp
+    @JvmSynthetic inline get() = hingeWidthDpSize.dp
+
+/** Returns a height dp size from a [FoldingFeature]. */
+public val FoldingFeature.hingeHeightDp: Dp
+    @JvmSynthetic inline get() = hingeHeightDpSize.dp
+
+/** Returns a dp size according to the window orientation from a [FoldingFeature]. */
 public val FoldingFeature.hingeDp: Dp
-    @JvmSynthetic inline get() {
-        return (bounds.right - bounds.left).px2dp.dp
-    }
+    @Composable @JvmSynthetic inline get() =
+        when (windowOrientation) {
+            WindowOrientation.ORIENTATION_LANDSCAPE -> hingeWidthDp
+            WindowOrientation.ORIENTATION_PORTRAIT -> hingeHeightDp
+        }
 
 /** Returns a Dp size from a [FoldingFeature]. */
 public val FoldingFeature.hingeDpSize: DpSize
-    @JvmSynthetic inline get() {
-        return DpSize(
-            width = (bounds.right - bounds.left).px2dp.dp,
-            height = (bounds.bottom - bounds.top).px2dp.dp
-        )
-    }
+    @JvmSynthetic inline get() =
+        DpSize(width = hingeWidthDpSize.dp, height = hingeWidthDpSize.dp)

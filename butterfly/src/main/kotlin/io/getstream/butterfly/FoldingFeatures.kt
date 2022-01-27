@@ -31,20 +31,24 @@ public fun List<DisplayFeature>.findFoldingFeature(): FoldingFeature? {
 
 /** Returns a [Size] spec from a [FoldingFeature]. */
 public fun DisplayFeature.toSize(): Size {
-    return Size(bounds.right - bounds.left, bounds.top - bounds.bottom)
+    return Size(bounds.right - bounds.left, bounds.bottom - bounds.top)
 }
 
-/** Returns a pixel size from a [FoldingFeature]. */
-public val FoldingFeature.hingePxSize: Int
-    @JvmSynthetic inline get() {
-        return bounds.right - bounds.left
-    }
+/** Returns a width pixel size from a [FoldingFeature]. */
+public val FoldingFeature.hingeWidthPxSize: Int
+    @JvmSynthetic inline get() = toSize().width
 
-/** Returns a Dp size from a [FoldingFeature]. */
-public val FoldingFeature.hingeDpSize: Int
-    @JvmSynthetic inline get() {
-        return (bounds.right - bounds.left).px2dp
-    }
+/** Returns a width Dp size from a [FoldingFeature]. */
+public val FoldingFeature.hingeWidthDpSize: Int
+    @JvmSynthetic inline get() = toSize().width.px2dp
+
+/** Returns a width pixel size from a [FoldingFeature]. */
+public val FoldingFeature.hingeHeightPxSize: Int
+    @JvmSynthetic inline get() = toSize().height
+
+/** Returns a width Dp size from a [FoldingFeature]. */
+public val FoldingFeature.hingeHeightDpSize: Int
+    @JvmSynthetic inline get() = toSize().height.px2dp
 
 /** Returns a [Posture] which represent the current posture of the foldable device. */
 public fun FoldingFeature.toPosture(): Posture {

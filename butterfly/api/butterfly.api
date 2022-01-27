@@ -8,8 +8,10 @@ public final class io/getstream/butterfly/FlowExtensionsKt {
 
 public final class io/getstream/butterfly/FoldingFeaturesKt {
 	public static final fun findFoldingFeature (Ljava/util/List;)Landroidx/window/layout/FoldingFeature;
-	public static final synthetic fun getHingeDpSize (Landroidx/window/layout/FoldingFeature;)I
-	public static final synthetic fun getHingePxSize (Landroidx/window/layout/FoldingFeature;)I
+	public static final synthetic fun getHingeHeightDpSize (Landroidx/window/layout/FoldingFeature;)I
+	public static final synthetic fun getHingeHeightPxSize (Landroidx/window/layout/FoldingFeature;)I
+	public static final synthetic fun getHingeWidthDpSize (Landroidx/window/layout/FoldingFeature;)I
+	public static final synthetic fun getHingeWidthPxSize (Landroidx/window/layout/FoldingFeature;)I
 	public static final synthetic fun isBookPosture (Landroidx/window/layout/FoldingFeature;)Z
 	public static final synthetic fun isFlat (Landroidx/window/layout/FoldingFeature;)Z
 	public static final synthetic fun isHalfOpened (Landroidx/window/layout/FoldingFeature;)Z
