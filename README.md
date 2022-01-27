@@ -52,7 +52,7 @@ Next, add the dependency below to your **module**'s `build.gradle` file.
 
 ```gradle
 dependencies {
-    implementation "io.getstream:butterfly:1.0.0"
+    implementation "io.getstream:butterfly:1.0.1"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2"
 }
 ```
@@ -77,7 +77,7 @@ repositories {
 Next, add the below dependency to your **module**'s `build.gradle` file.
 ```gradle
 dependencies {
-    implementation "io.getstream:butterfly:1.0.1-SNAPSHOT"
+    implementation "io.getstream:butterfly:1.0.2-SNAPSHOT"
 }
 ```
 
