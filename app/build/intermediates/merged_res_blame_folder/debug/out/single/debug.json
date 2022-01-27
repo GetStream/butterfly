@@ -1,0 +1,62 @@
+[
+    {
+        "merged": "/Users/jaewoongeum/Desktop/butterfly/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/jaewoongeum/Desktop/butterfly/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/jaewoongeum/Desktop/butterfly/app/build/intermediates/merged_res/debug/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "/Users/jaewoongeum/Desktop/butterfly/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/Users/jaewoongeum/Desktop/butterfly/app/build/intermediates/merged_res/debug/drawable_ic_launcher_background.xml.flat",
+        "source": "/Users/jaewoongeum/Desktop/butterfly/app/src/main/res/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/Users/jaewoongeum/Desktop/butterfly/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "/Users/jaewoongeum/Desktop/butterfly/app/src/main/res/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/jaewoongeum/Desktop/butterfly/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "/Users/jaewoongeum/Desktop/butterfly/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/jaewoongeum/Desktop/butterfly/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/jaewoongeum/Desktop/butterfly/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/jaewoongeum/Desktop/butterfly/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "/Users/jaewoongeum/Desktop/butterfly/app/src/main/res/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/jaewoongeum/Desktop/butterfly/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/jaewoongeum/Desktop/butterfly/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/jaewoongeum/Desktop/butterfly/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "/Users/jaewoongeum/Desktop/butterfly/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/jaewoongeum/Desktop/butterfly/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/jaewoongeum/Desktop/butterfly/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/jaewoongeum/Desktop/butterfly/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "/Users/jaewoongeum/Desktop/butterfly/app/src/main/res/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/jaewoongeum/Desktop/butterfly/app/build/intermediates/merged_res/debug/layout_activity_main.xml.flat",
+        "source": "/Users/jaewoongeum/Desktop/butterfly/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/jaewoongeum/Desktop/butterfly/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/jaewoongeum/Desktop/butterfly/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/jaewoongeum/Desktop/butterfly/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/jaewoongeum/Desktop/butterfly/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/Users/jaewoongeum/Desktop/butterfly/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/jaewoongeum/Desktop/butterfly/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp"
+    }
+]
