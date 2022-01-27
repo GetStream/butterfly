@@ -21,18 +21,12 @@ package io.getstream.butterfly
 import android.util.Size
 import androidx.window.layout.DisplayFeature
 import androidx.window.layout.FoldingFeature
-import androidx.window.layout.WindowLayoutInfo
 import io.getstream.butterfly.internal.px2dp
 import io.getstream.butterfly.internal.toSize
 
 /** Finds a [FoldingFeature] from a list of [DisplayFeature]. */
 public fun List<DisplayFeature>.findFoldingFeature(): FoldingFeature? {
     return filterIsInstance<FoldingFeature>().firstOrNull()
-}
-
-/** Finds a [FoldingFeature] from a [WindowLayoutInfo]. */
-public fun WindowLayoutInfo.findFoldingFeature(): FoldingFeature? {
-    return displayFeatures.filterIsInstance<FoldingFeature>().firstOrNull()
 }
 
 /** Returns a [Size] spec from a [FoldingFeature]. */

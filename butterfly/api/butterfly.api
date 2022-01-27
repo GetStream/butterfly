@@ -7,7 +7,6 @@ public final class io/getstream/butterfly/FlowExtensionsKt {
 }
 
 public final class io/getstream/butterfly/FoldingFeaturesKt {
-	public static final fun findFoldingFeature (Landroidx/window/layout/WindowLayoutInfo;)Landroidx/window/layout/FoldingFeature;
 	public static final fun findFoldingFeature (Ljava/util/List;)Landroidx/window/layout/FoldingFeature;
 	public static final synthetic fun getHingeDpSize (Landroidx/window/layout/FoldingFeature;)I
 	public static final synthetic fun getHingePxSize (Landroidx/window/layout/FoldingFeature;)I
@@ -74,6 +73,14 @@ public abstract class io/getstream/butterfly/WindowInfoFragmentActivity : androi
 	protected final fun getWindowSize ()Lio/getstream/butterfly/WindowSize;
 	protected fun onCreate (Landroid/os/Bundle;)V
 	protected abstract fun onWindowLayoutInfoUpdated (Landroidx/window/layout/WindowLayoutInfo;)V
+}
+
+public final class io/getstream/butterfly/WindowLayoutInfoKt {
+	public static final fun findFoldingFeature (Landroidx/window/layout/WindowLayoutInfo;)Landroidx/window/layout/FoldingFeature;
+	public static final synthetic fun getOcclusionType (Landroidx/window/layout/WindowLayoutInfo;)Landroidx/window/layout/FoldingFeature$OcclusionType;
+	public static final synthetic fun getOrientation (Landroidx/window/layout/WindowLayoutInfo;)Landroidx/window/layout/FoldingFeature$Orientation;
+	public static final synthetic fun getState (Landroidx/window/layout/WindowLayoutInfo;)Landroidx/window/layout/FoldingFeature$State;
+	public static final synthetic fun isSeparating (Landroidx/window/layout/WindowLayoutInfo;)Z
 }
 
 public abstract class io/getstream/butterfly/WindowSize {

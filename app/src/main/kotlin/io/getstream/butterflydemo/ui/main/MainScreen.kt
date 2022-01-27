@@ -16,6 +16,7 @@
 
 package io.getstream.butterflydemo.ui.main
 
+import android.util.Log
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -49,6 +50,9 @@ fun MessagingScreen(
         is WindowDpSize.Expanded -> MessagingScreenExpanded(onBackPressed = onBackPressed)
         else -> MessagingScreenRegular(onBackPressed = onBackPressed)
     }
+
+    val foldingFeature = LocalWindowLayoutInfo.current.findFoldingFeature()
+    Log.e("test", "${foldingFeature?.isSeparating ?: false}")
 }
 
 @Composable
