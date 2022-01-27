@@ -189,6 +189,15 @@ lifecycleScope.launch(Dispatchers.Main) {
 }
 ```
 
+You can also get the following information from the `WindowLayoutInfo` as in the following extensions:
+
+```kotlin
+val isSeparating: Boolean = WindowLayoutInfo.isSeparating
+val occlusionType: FoldingFeature.OcclusionType = WindowLayoutInfo.occlusionType 
+val orientation: FoldingFeature.Orientation = WindowLayoutInfo.orientation
+val state: FoldingFeature.State = WindowLayoutInfo.state
+```
+
 ## FoldingFeature
 
 [FoldingFeature](https://developer.android.com/reference/androidx/window/layout/FoldingFeature) that describes a fold in the flexible display or a hinge between two physical display panels.
@@ -203,6 +212,19 @@ val isHalfOpened = foldingFeature?.isHalfOpened
 val isFlat = foldingFeature?.isFlat
 val isVertical = foldingFeature?.isVertical
 val isHorizontal = foldingFeature?.isHorizontal
+```
+
+## Hinge Size
+
+If your foldable device is separated by a hinge, you can get a hinge size with the extensions below:
+
+```kotlin
+val hingePxSize: Int = foldingFeature.hingePxSize
+val hingeDpSize: Int = foldingFeature.hingeDpSize
+val hingeWidthPxSize: Int = foldingFeature.hingeWidthPxSize
+val hingeHeightPxSize: Int = foldingFeature.hingeHeightPxSize
+val hingeWidthDpSize: Int = foldingFeature.hingeWidthDpSize
+val hingeHeightDpSize: Int = foldingFeature.hingeHeightDpSize
 ```
 
 ## WindowInfoActivity
@@ -307,6 +329,17 @@ CompositionLocalProvider(LocalPosture provides postureState.value) {
     val posture = LocalPosture.current
     ...                
 }
+```
+
+## Hinge Size
+
+If your foldable device is separated by a hinge, you can get a hinge size with the extensions below:
+
+```kotlin
+val hingeDp: Dp = FoldingFeature.hingeDp
+val hingeDpSize: DpSize = FoldingFeature.hingeDpSize
+val hingeWidthDp: Dp = FoldingFeature.hingeWidthDp
+val hingeHeightDp: Dp = FoldingFeature.hingeHeightDp
 ```
 
 <img align="right" width="15%" src="https://user-images.githubusercontent.com/24237865/149445065-47c2506d-a738-4fb2-b4fb-eb6841b9e202.png" />
