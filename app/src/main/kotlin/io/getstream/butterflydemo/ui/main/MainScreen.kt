@@ -16,7 +16,6 @@
 
 package io.getstream.butterflydemo.ui.main
 
-import android.util.Log
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -34,9 +33,9 @@ import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat.startActivity
 import io.getstream.butterfly.compose.LocalWindowDpSize
 import io.getstream.butterfly.compose.LocalWindowLayoutInfo
-import io.getstream.butterfly.compose.WindowDpSize
 import io.getstream.butterfly.compose.hingeDp
 import io.getstream.butterfly.findFoldingFeature
+import io.getstream.butterfly.isSeparating
 import io.getstream.butterflydemo.R
 import io.getstream.butterflydemo.ui.message.MessagesActivity
 import io.getstream.butterflydemo.ui.message.MessagesScreen
@@ -46,13 +45,12 @@ import io.getstream.chat.android.compose.ui.channels.ChannelsScreen
 fun MessagingScreen(
     onBackPressed: () -> Unit
 ) {
-    when (LocalWindowDpSize.current) {
-        is WindowDpSize.Expanded -> MessagingScreenExpanded(onBackPressed = onBackPressed)
-        else -> MessagingScreenRegular(onBackPressed = onBackPressed)
+    val isSeparating = LocalWindowLayoutInfo.current.isSeparating
+    if (isSeparating) {
+        MessagingScreenExpanded(onBackPressed = onBackPressed)
+    } else {
+        MessagingScreenRegular(onBackPressed = onBackPressed)
     }
-
-    val foldingFeature = LocalWindowLayoutInfo.current.findFoldingFeature()
-    Log.e("test", "${foldingFeature?.isSeparating ?: false}")
 }
 
 @Composable
