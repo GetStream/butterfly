@@ -22,6 +22,7 @@ import android.util.Size
 import androidx.window.layout.DisplayFeature
 import androidx.window.layout.FoldingFeature
 import androidx.window.layout.WindowLayoutInfo
+import io.getstream.butterfly.internal.px2dp
 import io.getstream.butterfly.internal.toSize
 
 /** Finds a [FoldingFeature] from a list of [DisplayFeature]. */
@@ -38,6 +39,18 @@ public fun WindowLayoutInfo.findFoldingFeature(): FoldingFeature? {
 public fun DisplayFeature.toSize(): Size {
     return Size(bounds.right - bounds.left, bounds.top - bounds.bottom)
 }
+
+/** Returns a pixel size from a [FoldingFeature]. */
+public val FoldingFeature.hingePxSize: Int
+    @JvmSynthetic inline get() {
+        return bounds.right - bounds.left
+    }
+
+/** Returns a Dp size from a [FoldingFeature]. */
+public val FoldingFeature.hingeDpSize: Int
+    @JvmSynthetic inline get() {
+        return (bounds.right - bounds.left).px2dp
+    }
 
 /** Returns a [Posture] which represent the current posture of the foldable device. */
 public fun FoldingFeature.toPosture(): Posture {
