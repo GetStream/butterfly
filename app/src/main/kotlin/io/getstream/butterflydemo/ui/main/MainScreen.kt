@@ -33,7 +33,9 @@ import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat.startActivity
 import io.getstream.butterfly.compose.LocalWindowDpSize
 import io.getstream.butterfly.compose.LocalWindowLayoutInfo
+import io.getstream.butterfly.compose.WindowOrientation
 import io.getstream.butterfly.compose.hingeDp
+import io.getstream.butterfly.compose.windowOrientation
 import io.getstream.butterfly.findFoldingFeature
 import io.getstream.butterfly.isSeparating
 import io.getstream.butterflydemo.R
@@ -47,14 +49,18 @@ fun MessagingScreen(
 ) {
     val isSeparating = LocalWindowLayoutInfo.current.isSeparating
     if (isSeparating) {
-        MessagingScreenExpanded(onBackPressed = onBackPressed)
+        when (windowOrientation) {
+            WindowOrientation.ORIENTATION_LANDSCAPE ->
+                MessagingScreenExpandedLandscape(onBackPressed = onBackPressed)
+            WindowOrientation.ORIENTATION_PORTRAIT -> Unit
+        }
     } else {
         MessagingScreenRegular(onBackPressed = onBackPressed)
     }
 }
 
 @Composable
-private fun MessagingScreenExpanded(
+private fun MessagingScreenExpandedLandscape(
     onBackPressed: () -> Unit
 ) {
     val foldingFeature = LocalWindowLayoutInfo.current.findFoldingFeature()
@@ -80,6 +86,12 @@ private fun MessagingScreenExpanded(
             onBackPressed = { selectedChannelId = null }
         )
     }
+}
+
+@Composable
+private fun MessagingScreenExpandedPortrait(
+    onBackPressed: () -> Unit
+) {
 }
 
 @Composable

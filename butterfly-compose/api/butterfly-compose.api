@@ -43,3 +43,14 @@ public final class io/getstream/butterfly/compose/WindowDpSizeKt {
 	public static final fun rememberWindowDpSize (Landroidx/fragment/app/Fragment;Landroidx/compose/runtime/Composer;I)Lio/getstream/butterfly/compose/WindowDpSize;
 }
 
+public final class io/getstream/butterfly/compose/WindowOrientation : java/lang/Enum {
+	public static final field ORIENTATION_LANDSCAPE Lio/getstream/butterfly/compose/WindowOrientation;
+	public static final field ORIENTATION_PORTRAIT Lio/getstream/butterfly/compose/WindowOrientation;
+	public static fun valueOf (Ljava/lang/String;)Lio/getstream/butterfly/compose/WindowOrientation;
+	public static fun values ()[Lio/getstream/butterfly/compose/WindowOrientation;
+}
+
+public final class io/getstream/butterfly/compose/WindowOrientationKt {
+	public static final fun getWindowOrientation (Landroidx/compose/runtime/Composer;I)Lio/getstream/butterfly/compose/WindowOrientation;
+}
+
