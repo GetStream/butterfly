@@ -28,7 +28,7 @@ Also, it supports useful functions for Jetpack Compose and LiveData integration.
 
 ## Demo Project
 
-The demo project built with the [Stream Chat SDK for Jetpack Compose](https://getstream.io/chat/sdk/compose/).
+The demo project was built with the [Stream Chat SDK for Jetpack Compose](https://getstream.io/chat/sdk/compose/).
 It would be helpful to understand the demo project if you check out the links below:
 
 - [Compose Chat Messaging Tutorial](https://getstream.io/chat/compose/tutorial/)
