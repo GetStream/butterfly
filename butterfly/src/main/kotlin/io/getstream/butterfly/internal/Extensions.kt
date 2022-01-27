@@ -18,6 +18,7 @@ package io.getstream.butterfly.internal
 
 import android.content.res.Resources
 import android.graphics.Rect
+import android.util.DisplayMetrics
 import android.util.Size
 import android.util.TypedValue
 import androidx.activity.ComponentActivity
@@ -26,18 +27,24 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.window.layout.WindowLayoutInfo
 import io.getstream.butterfly.windowLayoutInfo
+import kotlin.math.roundToInt
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
-import kotlin.math.roundToInt
 
-/** Returns pixel size from the dp size. */
+/** Returns size from a dp size. */
 internal val Int.dp: Int
     @JvmSynthetic inline get() = TypedValue.applyDimension(
         TypedValue.COMPLEX_UNIT_DIP,
         this.toFloat(),
         Resources.getSystem().displayMetrics
     ).roundToInt()
+
+/** Returns dp size from a pixel size. */
+@PublishedApi
+internal val Int.px2dp: Int
+    @JvmSynthetic inline get() =
+        this / (Resources.getSystem().displayMetrics.densityDpi / DisplayMetrics.DENSITY_DEFAULT)
 
 /** Returns [Size] class from a [Rect] class. */
 @JvmSynthetic
