@@ -18,10 +18,12 @@
 
 package io.getstream.butterfly
 
+import android.content.res.Configuration
+import android.content.res.Resources
 import android.util.Size
 import androidx.window.layout.DisplayFeature
 import androidx.window.layout.FoldingFeature
-import androidx.window.layout.WindowLayoutInfo
+import io.getstream.butterfly.internal.px2dp
 import io.getstream.butterfly.internal.toSize
 
 /** Finds a [FoldingFeature] from a list of [DisplayFeature]. */
@@ -29,15 +31,44 @@ public fun List<DisplayFeature>.findFoldingFeature(): FoldingFeature? {
     return filterIsInstance<FoldingFeature>().firstOrNull()
 }
 
-/** Finds a [FoldingFeature] from a [WindowLayoutInfo]. */
-public fun WindowLayoutInfo.findFoldingFeature(): FoldingFeature? {
-    return displayFeatures.filterIsInstance<FoldingFeature>().firstOrNull()
-}
-
 /** Returns a [Size] spec from a [FoldingFeature]. */
 public fun DisplayFeature.toSize(): Size {
-    return Size(bounds.right - bounds.left, bounds.top - bounds.bottom)
+    return Size(bounds.right - bounds.left, bounds.bottom - bounds.top)
 }
+
+/** Returns a width pixel size of the hinge from a [FoldingFeature]. */
+public val FoldingFeature.hingeWidthPxSize: Int
+    @JvmSynthetic inline get() = toSize().width
+
+/** Returns a width pixel size of the hinge from a [FoldingFeature]. */
+public val FoldingFeature.hingeHeightPxSize: Int
+    @JvmSynthetic inline get() = toSize().height
+
+/** Returns a pixel size of the hinge from a [FoldingFeature]. */
+public val FoldingFeature.hingePxSize: Int
+    @JvmSynthetic inline get() =
+        if (Resources.getSystem().configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            hingeWidthPxSize
+        } else {
+            hingeHeightPxSize
+        }
+
+/** Returns a width Dp size of the hinge from a [FoldingFeature]. */
+public val FoldingFeature.hingeWidthDpSize: Int
+    @JvmSynthetic inline get() = toSize().width.px2dp
+
+/** Returns a width Dp size of the hinge from a [FoldingFeature]. */
+public val FoldingFeature.hingeHeightDpSize: Int
+    @JvmSynthetic inline get() = toSize().height.px2dp
+
+/** Returns a dp size of the hinge from a [FoldingFeature]. */
+public val FoldingFeature.hingeDpSize: Int
+    @JvmSynthetic inline get() =
+        if (Resources.getSystem().configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            hingeWidthDpSize
+        } else {
+            hingeHeightDpSize
+        }
 
 /** Returns a [Posture] which represent the current posture of the foldable device. */
 public fun FoldingFeature.toPosture(): Posture {

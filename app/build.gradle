@@ -43,6 +43,13 @@ android {
     lintOptions {
         abortOnError false
     }
+
+    tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+        kotlinOptions.freeCompilerArgs += [
+            "-Xopt-in=androidx.compose.animation.ExperimentalAnimationApi",
+            "-Xopt-in=androidx.compose.foundation.ExperimentalFoundationApi",
+        ]
+    }
 }
 
 dependencies {

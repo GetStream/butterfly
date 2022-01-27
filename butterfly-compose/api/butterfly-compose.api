@@ -1,6 +1,14 @@
+public final class io/getstream/butterfly/compose/FoldingFeaturesKt {
+	public static final synthetic fun getHingeDp (Landroidx/window/layout/FoldingFeature;Landroidx/compose/runtime/Composer;I)F
+	public static final synthetic fun getHingeDpSize (Landroidx/window/layout/FoldingFeature;)J
+	public static final synthetic fun getHingeHeightDp (Landroidx/window/layout/FoldingFeature;)F
+	public static final synthetic fun getHingeWidthDp (Landroidx/window/layout/FoldingFeature;)F
+}
+
 public final class io/getstream/butterfly/compose/LocalProvidersKt {
 	public static final fun getLocalPosture ()Landroidx/compose/runtime/ProvidableCompositionLocal;
 	public static final fun getLocalWindowDpSize ()Landroidx/compose/runtime/ProvidableCompositionLocal;
+	public static final fun getLocalWindowLayoutInfo ()Landroidx/compose/runtime/ProvidableCompositionLocal;
 }
 
 public final class io/getstream/butterfly/compose/StateExtensionsKt {
@@ -35,5 +43,16 @@ public final class io/getstream/butterfly/compose/WindowDpSize$Medium : io/getst
 public final class io/getstream/butterfly/compose/WindowDpSizeKt {
 	public static final fun rememberWindowDpSize (Landroid/app/Activity;Landroidx/compose/runtime/Composer;I)Lio/getstream/butterfly/compose/WindowDpSize;
 	public static final fun rememberWindowDpSize (Landroidx/fragment/app/Fragment;Landroidx/compose/runtime/Composer;I)Lio/getstream/butterfly/compose/WindowDpSize;
+}
+
+public final class io/getstream/butterfly/compose/WindowOrientation : java/lang/Enum {
+	public static final field ORIENTATION_LANDSCAPE Lio/getstream/butterfly/compose/WindowOrientation;
+	public static final field ORIENTATION_PORTRAIT Lio/getstream/butterfly/compose/WindowOrientation;
+	public static fun valueOf (Ljava/lang/String;)Lio/getstream/butterfly/compose/WindowOrientation;
+	public static fun values ()[Lio/getstream/butterfly/compose/WindowOrientation;
+}
+
+public final class io/getstream/butterfly/compose/WindowOrientationKt {
+	public static final fun getWindowOrientation (Landroidx/compose/runtime/Composer;I)Lio/getstream/butterfly/compose/WindowOrientation;
 }
 

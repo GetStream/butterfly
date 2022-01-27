@@ -21,7 +21,7 @@ object Versions {
     internal const val COMPOSE_ACTIVITY = "1.4.0"
     internal const val COMPOSE_MATERIAL3 = "1.0.0-alpha02"
 
-    internal const val STREAM_SDK = "4.26.0-beta"
+    internal const val STREAM_SDK = "4.27.0-beta"
 }
 
 object Dependencies {

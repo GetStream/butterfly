@@ -36,6 +36,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import io.getstream.butterfly.compose.WindowOrientation
 import io.getstream.butterflydemo.R
 import io.getstream.chat.android.common.state.MessageMode
 import io.getstream.chat.android.common.state.Reply
@@ -53,7 +54,8 @@ import io.getstream.chat.android.compose.viewmodel.messages.MessagesViewModelFac
 @Composable
 fun MessagesScreen(
     cid: String?,
-    width: Dp,
+    itemSize: Dp,
+    windowOrientation: WindowOrientation,
     onBackPressed: () -> Unit = {},
 ) {
     if (cid != null) {
@@ -90,7 +92,15 @@ fun MessagesScreen(
 
         SystemBackPressedHandler(isEnabled = true, onBackPressed = backAction)
 
-        Box(modifier = Modifier.width(width)) {
+        Box(
+            modifier = Modifier.apply {
+                if (windowOrientation == WindowOrientation.ORIENTATION_LANDSCAPE) {
+                    width(itemSize)
+                } else {
+                    height(itemSize)
+                }
+            }
+        ) {
             Scaffold(
                 modifier = Modifier.fillMaxSize(),
                 topBar = {

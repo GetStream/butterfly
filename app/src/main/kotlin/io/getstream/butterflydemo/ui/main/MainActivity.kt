@@ -21,7 +21,9 @@ import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.runtime.CompositionLocalProvider
 import io.getstream.butterfly.compose.LocalWindowDpSize
+import io.getstream.butterfly.compose.LocalWindowLayoutInfo
 import io.getstream.butterfly.compose.rememberWindowDpSize
+import io.getstream.butterfly.compose.windowLayoutInfoState
 import io.getstream.chat.android.compose.ui.theme.ChatTheme
 
 class MainActivity : AppCompatActivity() {
@@ -29,8 +31,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            CompositionLocalProvider(LocalWindowDpSize provides rememberWindowDpSize()) {
-                ChatTheme {
+            ChatTheme {
+                CompositionLocalProvider(
+                    LocalWindowDpSize provides rememberWindowDpSize(),
+                    LocalWindowLayoutInfo provides windowLayoutInfoState.value
+                ) {
                     MessagingScreen(onBackPressed = { finish() })
                 }
             }
