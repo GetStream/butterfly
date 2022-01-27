@@ -18,6 +18,8 @@
 
 package io.getstream.butterfly
 
+import android.content.res.Configuration
+import android.content.res.Resources
 import android.util.Size
 import androidx.window.layout.DisplayFeature
 import androidx.window.layout.FoldingFeature
@@ -34,21 +36,39 @@ public fun DisplayFeature.toSize(): Size {
     return Size(bounds.right - bounds.left, bounds.bottom - bounds.top)
 }
 
-/** Returns a width pixel size from a [FoldingFeature]. */
+/** Returns a width pixel size of the hinge from a [FoldingFeature]. */
 public val FoldingFeature.hingeWidthPxSize: Int
     @JvmSynthetic inline get() = toSize().width
 
-/** Returns a width Dp size from a [FoldingFeature]. */
-public val FoldingFeature.hingeWidthDpSize: Int
-    @JvmSynthetic inline get() = toSize().width.px2dp
-
-/** Returns a width pixel size from a [FoldingFeature]. */
+/** Returns a width pixel size of the hinge from a [FoldingFeature]. */
 public val FoldingFeature.hingeHeightPxSize: Int
     @JvmSynthetic inline get() = toSize().height
 
-/** Returns a width Dp size from a [FoldingFeature]. */
+/** Returns a pixel size of the hinge from a [FoldingFeature]. */
+public val FoldingFeature.hingePxSize: Int
+    @JvmSynthetic inline get() =
+        if (Resources.getSystem().configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            hingeWidthPxSize
+        } else {
+            hingeHeightPxSize
+        }
+
+/** Returns a width Dp size of the hinge from a [FoldingFeature]. */
+public val FoldingFeature.hingeWidthDpSize: Int
+    @JvmSynthetic inline get() = toSize().width.px2dp
+
+/** Returns a width Dp size of the hinge from a [FoldingFeature]. */
 public val FoldingFeature.hingeHeightDpSize: Int
     @JvmSynthetic inline get() = toSize().height.px2dp
+
+/** Returns a dp size of the hinge from a [FoldingFeature]. */
+public val FoldingFeature.hingeDpSize: Int
+    @JvmSynthetic inline get() =
+        if (Resources.getSystem().configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            hingeWidthDpSize
+        } else {
+            hingeHeightDpSize
+        }
 
 /** Returns a [Posture] which represent the current posture of the foldable device. */
 public fun FoldingFeature.toPosture(): Posture {

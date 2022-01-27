@@ -24,15 +24,15 @@ import androidx.window.layout.FoldingFeature
 import io.getstream.butterfly.hingeHeightDpSize
 import io.getstream.butterfly.hingeWidthDpSize
 
-/** Returns a height dp size from a [FoldingFeature]. */
+/** Returns a height dp size of the hinge from a [FoldingFeature]. */
 public val FoldingFeature.hingeWidthDp: Dp
     @JvmSynthetic inline get() = hingeWidthDpSize.dp
 
-/** Returns a height dp size from a [FoldingFeature]. */
+/** Returns a height dp size of the hinge from a [FoldingFeature]. */
 public val FoldingFeature.hingeHeightDp: Dp
     @JvmSynthetic inline get() = hingeHeightDpSize.dp
 
-/** Returns a dp size according to the window orientation from a [FoldingFeature]. */
+/** Returns a dp size of the hinge according to the window orientation from a [FoldingFeature]. */
 public val FoldingFeature.hingeDp: Dp
     @Composable @JvmSynthetic inline get() =
         when (windowOrientation) {
@@ -40,7 +40,7 @@ public val FoldingFeature.hingeDp: Dp
             WindowOrientation.ORIENTATION_PORTRAIT -> hingeHeightDp
         }
 
-/** Returns a Dp size from a [FoldingFeature]. */
+/** Returns a dp size of the hinge from a [FoldingFeature]. */
 public val FoldingFeature.hingeDpSize: DpSize
     @JvmSynthetic inline get() =
         DpSize(width = hingeWidthDpSize.dp, height = hingeWidthDpSize.dp)
