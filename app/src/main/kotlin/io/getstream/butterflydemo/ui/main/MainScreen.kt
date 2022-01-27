@@ -32,7 +32,10 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat.startActivity
 import io.getstream.butterfly.compose.LocalWindowDpSize
+import io.getstream.butterfly.compose.LocalWindowLayoutInfo
 import io.getstream.butterfly.compose.WindowDpSize
+import io.getstream.butterfly.compose.hingeDp
+import io.getstream.butterfly.findFoldingFeature
 import io.getstream.butterflydemo.R
 import io.getstream.butterflydemo.ui.message.MessagesActivity
 import io.getstream.butterflydemo.ui.message.MessagesScreen
@@ -52,9 +55,10 @@ fun MessagingScreen(
 private fun MessagingScreenExpanded(
     onBackPressed: () -> Unit
 ) {
-    val hingeHalfSize = 15.dp
+    val foldingFeature = LocalWindowLayoutInfo.current.findFoldingFeature()
     val windowSize = LocalWindowDpSize.current
-    val rowItemWidth = windowSize.windowSize.width / 2 - hingeHalfSize
+    val hingeSize = foldingFeature?.hingeDp ?: 0.dp
+    val rowItemWidth = (windowSize.windowSize.width - hingeSize) / 2
     var selectedChannelId by rememberSaveable { mutableStateOf<String?>(null) }
 
     Row(Modifier.fillMaxSize()) {
@@ -66,7 +70,7 @@ private fun MessagingScreenExpanded(
             )
         }
 
-        Spacer(modifier = Modifier.width(hingeHalfSize * 2))
+        Spacer(modifier = Modifier.width(hingeSize))
 
         MessagesScreen(
             cid = selectedChannelId,

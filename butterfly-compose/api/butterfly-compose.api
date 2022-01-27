@@ -1,6 +1,12 @@
+public final class io/getstream/butterfly/compose/FoldingFeaturesKt {
+	public static final synthetic fun getHingeDp (Landroidx/window/layout/FoldingFeature;)F
+	public static final synthetic fun getHingeDpSize (Landroidx/window/layout/FoldingFeature;)J
+}
+
 public final class io/getstream/butterfly/compose/LocalProvidersKt {
 	public static final fun getLocalPosture ()Landroidx/compose/runtime/ProvidableCompositionLocal;
 	public static final fun getLocalWindowDpSize ()Landroidx/compose/runtime/ProvidableCompositionLocal;
+	public static final fun getLocalWindowLayoutInfo ()Landroidx/compose/runtime/ProvidableCompositionLocal;
 }
 
 public final class io/getstream/butterfly/compose/StateExtensionsKt {
