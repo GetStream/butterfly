@@ -352,7 +352,7 @@ Butterfly supports **LiveData** integration to let observing layout changes as *
 
 ```gradle
 dependencies {
-    implementation "io.getstream:butterfly-livedata:1.0.0"
+    implementation "io.getstream:butterfly-livedata:1.0.1"
 }
 ```
 
