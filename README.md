@@ -269,7 +269,7 @@ Butterfly supports Jetpack Compose to build adaptive and responsive UIs. First, 
 
 ```gradle
 dependencies {
-    implementation "io.getstream:butterfly-compose:1.0.0"
+    implementation "io.getstream:butterfly-compose:1.0.1"
 }
 ```
 
