@@ -1,10 +1,10 @@
 package io.getstream.butterfly
 
 object Versions {
-    internal const val ANDROID_GRADLE_PLUGIN = "7.1.0"
-    internal const val ANDROID_GRADLE_SPOTLESS = "6.1.0"
+    internal const val ANDROID_GRADLE_PLUGIN = "7.1.2"
+    internal const val ANDROID_GRADLE_SPOTLESS = "6.2.1"
     internal const val GRADLE_NEXUS_PUBLISH_PLUGIN = "1.1.0"
-    internal const val KOTLIN = "1.5.30"
+    internal const val KOTLIN = "1.6.10"
     internal const val KOTLIN_GRADLE_DOKKA = "1.6.10"
     internal const val KOTLIN_BINARY_VALIDATOR = "0.8.0"
     internal const val KOTLIN_COROUTINE = "1.5.2"
@@ -16,11 +16,11 @@ object Versions {
     internal const val ANDROIDX_LIFECYCLE = "2.4.0"
     internal const val AndroidX_LIVEDATA = "2.4.0"
 
-    internal const val COMPOSE = "1.1.0-alpha04"
+    internal const val COMPOSE = "1.1.1"
     internal const val COMPOSE_ACTIVITY = "1.4.0"
     internal const val COMPOSE_MATERIAL3 = "1.0.0-alpha02"
 
-    internal const val STREAM_SDK = "4.27.0-beta"
+    internal const val STREAM_SDK = "5.0.1"
 }
 
 object Dependencies {
