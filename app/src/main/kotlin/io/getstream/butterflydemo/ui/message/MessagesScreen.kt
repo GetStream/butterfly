@@ -16,6 +16,7 @@
 
 package io.getstream.butterflydemo.ui.message
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -40,7 +41,6 @@ import io.getstream.butterfly.compose.WindowOrientation
 import io.getstream.butterflydemo.R
 import io.getstream.chat.android.common.state.MessageMode
 import io.getstream.chat.android.common.state.Reply
-import io.getstream.chat.android.compose.handlers.SystemBackPressedHandler
 import io.getstream.chat.android.compose.state.imagepreview.ImagePreviewResultType
 import io.getstream.chat.android.compose.ui.messages.composer.MessageComposer
 import io.getstream.chat.android.compose.ui.messages.header.MessageListHeader
@@ -90,7 +90,7 @@ fun MessagesScreen(
             }
         }
 
-        SystemBackPressedHandler(isEnabled = true, onBackPressed = backAction)
+        BackHandler(enabled = true, onBack = backAction)
 
         Box(
             modifier = Modifier.apply {
