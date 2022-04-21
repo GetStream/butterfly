@@ -10,7 +10,7 @@ object Versions {
     internal const val KOTLIN_COROUTINE = "1.5.2"
 
     internal const val MATERIAL = "1.4.0"
-    internal const val ANDROIDX_WINDOW = "1.0.0"
+    internal const val ANDROIDX_WINDOW = "1.1.0-alpha01"
     internal const val ANDROIDX_APPCOMPAT = "1.4.0"
     internal const val ANDROIDX_CORE = "1.7.0"
     internal const val ANDROIDX_LIFECYCLE = "2.4.0"
@@ -20,7 +20,7 @@ object Versions {
     internal const val COMPOSE_ACTIVITY = "1.4.0"
     internal const val COMPOSE_MATERIAL3 = "1.0.0-alpha02"
 
-    internal const val STREAM_SDK = "5.0.1"
+    internal const val STREAM_SDK = "5.0.3"
 }
 
 object Dependencies {
