@@ -27,10 +27,10 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.window.layout.WindowLayoutInfo
 import io.getstream.butterfly.windowLayoutInfo
-import kotlin.math.roundToInt
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
+import kotlin.math.roundToInt
 
 /** Returns size from a dp size. */
 internal val Int.dp: Int
