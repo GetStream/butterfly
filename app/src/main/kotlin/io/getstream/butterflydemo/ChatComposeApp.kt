@@ -32,22 +32,24 @@ class ChatComposeApp : Application() {
     }
 
     private fun setupStreamSdk() {
+        val logLevel = if (BuildConfig.DEBUG) ChatLogLevel.ALL else ChatLogLevel.NOTHING
         val offlinePluginFactory = StreamOfflinePluginFactory(
             config = Config(),
             appContext = this
         )
         ChatClient.Builder("b67pax5b2wdq", applicationContext)
             .withPlugin(offlinePluginFactory)
-            .logLevel(ChatLogLevel.ALL)
+            .logLevel(logLevel)
             .build()
     }
 
     private fun connectUser() {
         ChatClient.instance().connectUser(
-            user = User(id = "tutorial-droid").apply {
-                name = "Tutorial Droid"
+            user = User(
+                id = "tutorial-droid",
+                name = "Tutorial Droid",
                 image = "https://bit.ly/2TIt8NR"
-            },
+            ),
             token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidHV0b3JpYWwtZHJvaWQifQ.NhEr0hP9W9nwqV7ZkdShxvi02C5PR7SJE7Cs4y7kyqg"
         ).enqueue()
     }
