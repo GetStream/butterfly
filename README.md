@@ -1,6 +1,7 @@
 ![Butterfly](https://user-images.githubusercontent.com/24237865/150674436-d2713bf0-da35-4b75-8629-5c83d8500cd7.png)<br><br>
 
 <p align="center">
+  <a href="https://devlibrary.withgoogle.com/products/android/repos/GetStream-butterfly"><img alt="Google" src="https://skydoves.github.io/badges/google-devlib.svg"/></a><br>
   <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
   <a href="https://android-arsenal.com/api?level=21"><img alt="API" src="https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat"/></a>
   <a href="https://github.com/GetStream/butterfly/actions/workflows/android.yml"><img alt="Build Status" src="https://github.com/GetStream/butterfly/actions/workflows/android.yml/badge.svg"/></a>
@@ -36,6 +37,14 @@ It would be helpful to understand the demo project if you check out the links be
 - [Compose Chat Messaging Tutorial](https://getstream.io/chat/compose/tutorial/)
 - [Introduction to dual-screen devices](https://docs.microsoft.com/en-us/dual-screen/introduction)
 - [Unbundling the WindowManager](https://medium.com/androiddevelopers/unbundling-the-windowmanager-fa060adb3ce9)
+
+<a href="https://getstream.io/tutorials/android-chat/?utm_source=Github&utm_campaign=Devrel_oss&utm_medium=sketchbook"><img src="https://user-images.githubusercontent.com/24237865/138428440-b92e5fb7-89f8-41aa-96b1-71a5486c5849.png" align="right" width="13%"/></a>
+
+## Contribution 💙
+
+Butterfly is maintained by __[Stream](https://getstream.io/)__.
+If you’re interested in adding powerful In-App Messaging to your app, check out the __[Stream Chat SDK for Android](https://getstream.io/tutorials/android-chat/?utm_source=Github&utm_campaign=Devrel_oss&utm_medium=butterfly)__!
+Also, anyone can contribute to improving code, docs, or something following our [Contributing Guideline](/CONTRIBUTING.md).
 
 ## Download
 [![Maven Central](https://img.shields.io/maven-central/v/io.getstream/butterfly.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22io.getstream%22%20AND%20a:%22butterfly%22)
@@ -370,7 +379,7 @@ windowLayoutInfoLiveData().observe(this) { windowLayoutInfo ->
 }
 ```
 
- <a href="https://getstream.io/tutorials/android-chat/">
+ <a href="https://getstream.io/tutorials/android-chat/?utm_source=Github&utm_campaign=Devrel_oss&utm_medium=butterfly">
 <img src="https://user-images.githubusercontent.com/24237865/138428440-b92e5fb7-89f8-41aa-96b1-71a5486c5849.png" align="right" width="12%"/></a>
 
 ## Find this library useful? ❤️

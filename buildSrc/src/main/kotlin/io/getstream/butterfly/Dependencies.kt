@@ -10,7 +10,7 @@ object Versions {
     internal const val KOTLIN_COROUTINE = "1.6.0"
 
     internal const val MATERIAL = "1.5.0"
-    internal const val ANDROIDX_WINDOW = "1.0.0"
+    internal const val ANDROIDX_WINDOW = "1.1.0-alpha01"
     internal const val ANDROIDX_APPCOMPAT = "1.4.0"
     internal const val ANDROIDX_CORE = "1.7.0"
     internal const val ANDROIDX_LIFECYCLE = "2.4.0"
@@ -50,7 +50,8 @@ object Dependencies {
     const val composeRuntime = "androidx.compose.runtime:runtime:${Versions.COMPOSE}"
     const val composeMaterial = "androidx.compose.material:material:${Versions.COMPOSE}"
     const val composeActivity = "androidx.activity:activity-compose:${Versions.COMPOSE_ACTIVITY}"
-    const val composeMaterial3 = "androidx.compose.material3:material3:${Versions.COMPOSE_MATERIAL3}"
+    const val composeMaterial3 =
+        "androidx.compose.material3:material3:${Versions.COMPOSE_MATERIAL3}"
 
     const val streamChatSDK = "io.getstream:stream-chat-android-compose:${Versions.STREAM_SDK}"
 }

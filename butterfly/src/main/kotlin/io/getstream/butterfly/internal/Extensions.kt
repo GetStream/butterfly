@@ -27,10 +27,10 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.window.layout.WindowLayoutInfo
 import io.getstream.butterfly.windowLayoutInfo
+import kotlin.math.roundToInt
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
-import kotlin.math.roundToInt
 
 /** Returns size from a dp size. */
 internal val Int.dp: Int
@@ -53,12 +53,12 @@ internal fun Rect.toSize(): Size {
 }
 
 @JvmSynthetic
-internal inline fun ComponentActivity.collectWindowLayoutInfo(
-    crossinline action: suspend (value: WindowLayoutInfo) -> Unit
+internal fun ComponentActivity.collectWindowLayoutInfo(
+    action: (value: WindowLayoutInfo) -> Unit
 ) {
     lifecycleScope.launch(Dispatchers.Main) {
         lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
-            windowLayoutInfo.collect(action)
+            windowLayoutInfo.collect { action(it) }
         }
     }
 }
