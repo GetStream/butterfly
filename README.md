@@ -68,7 +68,7 @@ dependencies {
 }
 ```
 
-> Note: Butterfly includes [Jetpack WindowManager](https://developer.android.com/jetpack/androidx/releases/window) to compute window internally. So if you're using WindowManager in your project, please make sure your project uses the same version or exclude the dependency to adapt yours.
+> **Note**: Butterfly includes [Jetpack WindowManager](https://developer.android.com/jetpack/androidx/releases/window) to compute window internally. So if you're using WindowManager in your project, please make sure your project uses the same version or exclude the dependency to adapt yours.
 
 ### SNAPSHOT 
 
@@ -183,7 +183,7 @@ lifecycleScope.launch(Dispatchers.Main) {
     }
 }
 ```
-> Note: Make sure your project includes [Coroutines](https://developer.android.com/kotlin/coroutines) and `androidx.lifecycle:lifecycle-runtime-ktx:2.4.0` dependencies.
+> **Note**: Make sure your project includes [Coroutines](https://developer.android.com/kotlin/coroutines) and `androidx.lifecycle:lifecycle-runtime-ktx:2.4.0` dependencies.
 
 ## WindowLayoutInfo
 
@@ -300,7 +300,7 @@ when (windowDpSize) {
 }
 ```
 
-> Note: Likewise the `WindowSize`, you can also customize the pre-defined breakpoints, which used to `rememberWindowDpSize` with the [GlobalWindowSize](https://github.com/GetStream/butterfly#globalwindowsize) object class.
+> **Note**: Likewise the `WindowSize`, you can also customize the pre-defined breakpoints, which used to `rememberWindowDpSize` with the [GlobalWindowSize](https://github.com/GetStream/butterfly#globalwindowsize) object class.
 
 ## Posture
 
