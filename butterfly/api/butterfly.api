@@ -109,3 +109,7 @@ public final class io/getstream/butterfly/WindowSizeKt {
 	public static final fun getWindowSize (Landroidx/fragment/app/Fragment;)Lio/getstream/butterfly/WindowSize;
 }
 
+public final class io/getstream/butterfly/internal/ExtensionsKt {
+	public static final synthetic fun getPx2dp (I)I
+}
+
