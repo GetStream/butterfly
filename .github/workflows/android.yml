@@ -6,6 +6,11 @@ on:
   pull_request:
     branches: [ main, develop ]
 
+permissions:
+  actions: write
+  contents: read
+  pull-requests: read
+
 jobs:
   lint:
     name: Spotless check
