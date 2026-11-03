@@ -1,3 +1,5 @@
+> **This repository is archived and no longer maintained.** For a current alternative, see [adaptive layouts in Jetpack Compose](https://developer.android.com/develop/ui/compose/layouts/adaptive).
+
 ![Butterfly](https://user-images.githubusercontent.com/24237865/150674436-d2713bf0-da35-4b75-8629-5c83d8500cd7.png)<br><br>
 
 <p align="center">
